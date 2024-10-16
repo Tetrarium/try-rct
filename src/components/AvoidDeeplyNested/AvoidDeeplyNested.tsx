@@ -57,7 +57,7 @@ const TravelPlan: FC = () => {
             parentId={0}
             placesById={plan}
             onComplete={handleComplete}
-          >{id}</PlaceTree>
+          />
         ))}
       </ol>
     </>
@@ -67,7 +67,7 @@ const TravelPlan: FC = () => {
 interface PlaceTreeProps {
   id: number;
   parentId: number;
-  placesById: Place[];
+  placesById: Plan;
   onComplete: (parentId: number, childId: number) => void;
 }
 
