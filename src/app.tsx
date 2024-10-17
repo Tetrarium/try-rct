@@ -5,6 +5,7 @@ import AvoidDeeplyNested from "./components/AvoidDeeplyNested/AvoidDeeplyNested"
 import { ConditionalRendering } from "./components/ConditionalRendering/ConditionalRendering";
 import FirstComponent from "./components/FirstComponent/FirstComponent";
 import Game from "./components/Game/game";
+import LiftingState from "./components/LiftingState/LiftingState";
 import PassingProps from "./components/PassingProps/PassingProps";
 import Products from "./components/Products/products";
 import RenderingList from "./components/renderingList/RenderingList";
@@ -24,7 +25,8 @@ const Main = styled.main`
 const Nav = styled.nav`
   background: #ccc;
   padding: 20px;
-  min-width: 200px;
+  width: 250px;
+  min-width: 250px;
   height: 100vh;
   overflow-y: auto;
 `;
@@ -56,6 +58,7 @@ function App() {
           <NavItem route='/conditional-rendering'>Conditional Rendering</NavItem>
           <NavItem route='/rendering-list'>Rendering List</NavItem>
           <NavItem route='/avoid-deeply-nested'>Avoid deeply nested state</NavItem>
+          <NavItem route='/lifting-state'>Lifting State</NavItem>
         </ul>
       </Nav>
       <Main>
@@ -67,6 +70,7 @@ function App() {
           <Route path="/conditional-rendering" element={<ConditionalRendering />} />
           <Route path="/rendering-list" element={<RenderingList />} />
           <Route path="/avoid-deeply-nested" element={<AvoidDeeplyNested />} />
+          <Route path="/lifting-state" element={<LiftingState />} />
         </Routes>
       </Main>
     </Container>
