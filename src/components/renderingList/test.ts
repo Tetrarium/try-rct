@@ -1,6 +1,6 @@
 console.log('test ts');
 
-const test1 = () => {
+export const test1 = () => {
   const user = {
     firstName: 'Mike',
     pointsCount: 1000,
@@ -17,7 +17,7 @@ const test1 = () => {
 // test1();
 
 
-const test2 = () => {
+export const test2 = () => {
   // Enums
 
   enum OrderStatus {
@@ -38,7 +38,7 @@ const test2 = () => {
 // test2();
 
 
-const test3 = () => {
+export const test3 = () => {
   // Type Aliases
   type User = {
     firstName: string;
@@ -53,11 +53,11 @@ const test3 = () => {
 // test3();
 
 
-const test4 = () => {
+export const test4 = () => {
   const sentence = 'table cat table dog dog apple table';
 
   const words = sentence.split(' ');
-  const initial: any = {};
+  const initial: { [key: string]: number; } = {};
 
   const result = words.reduce((acc, word) => {
     acc[word] = Object.hasOwn(acc, word) ? acc[word] + 1 : 1;
@@ -78,7 +78,7 @@ const test4 = () => {
 // console.log(Hello);
 // Hello.helloWorld();
 
-const test5 = () => {
+export const test5 = () => {
   type MyFunction = (n: number) => number;
 
   function process(cb: MyFunction) {
@@ -90,7 +90,7 @@ const test5 = () => {
 // test5();
 
 
-const test6 = () => {
+export const test6 = () => {
   function filter(coll: number[], cb: (arg: number, index: number) => boolean) {
     const result: number[] = [];
     coll.forEach((n, index) => {
@@ -109,7 +109,7 @@ const test6 = () => {
 // test6();
 
 
-const test7 = () => {
+export const test7 = () => {
   function sum(a: number, b: number): number {
     return a + b;
   }
@@ -121,7 +121,7 @@ const test7 = () => {
 // test7();
 
 
-const test8 = () => {
+export const test8 = () => {
   // Function Overloads
   function concat(a: number, b: number): string;
   function concat(a: string, b: string): string;
@@ -141,7 +141,7 @@ const test8 = () => {
 // test8();
 
 
-const test9 = () => {
+export const test9 = () => {
   // Function Overloads
   type Overloaded = {
     (a: number, b: number): string;
@@ -162,7 +162,7 @@ const test9 = () => {
 // test9();
 
 
-const test10 = () => {
+export const test10 = () => {
   function isPresence(value: unknown): boolean {
     if (value === null || value === undefined) {
       return false;
@@ -198,7 +198,7 @@ const test10 = () => {
 // test10();
 
 
-const test11 = () => {
+export const test11 = () => {
   const items1 = [[3, 8], [10, 4, 8]];
   console.log(items1);
 
@@ -267,7 +267,7 @@ const test11 = () => {
 // test13();
 
 
-const test14 = () => {
+export const test14 = () => {
   const user = {
     firstName: 'Vasya',
     lastName: 'Ivanov',
@@ -313,7 +313,7 @@ const test14 = () => {
 // console.log(sort(arr, comparator));
 
 
-const test15 = () => {
+export const test15 = () => {
   class Point {
     x: number;
     y: number;
@@ -334,7 +334,7 @@ const test15 = () => {
 };
 // test15();
 
-const test16 = () => {
+export const test16 = () => {
   class Point {
     x: number;
     y: number;
@@ -358,7 +358,7 @@ const test16 = () => {
 // test16();
 
 
-const test17 = () => {
+export const test17 = () => {
   class Point {
     private x: number;
     private y: number;
@@ -380,7 +380,7 @@ const test17 = () => {
 // test17();
 
 
-const test18 = () => {
+export const test18 = () => {
   class SomeClass {
     constructor(public one: number, private two: string) { }
 
@@ -396,7 +396,7 @@ const test18 = () => {
 // test18();
 
 
-const test19 = () => {
+export const test19 = () => {
   class CustomFile {
     constructor(public name: string, public size: number) { }
 
@@ -457,7 +457,7 @@ const test19 = () => {
 // test19();
 
 
-const test20 = () => {
+export const test20 = () => {
   class CustomFile {
     private static readonly maxCustomFileSize = 1000;
 
@@ -494,7 +494,7 @@ const test20 = () => {
 // test20();
 
 
-const test21 = () => {
+export const test21 = () => {
   class CustomFile {
     static maxCustomFileSize = 1000;
 
@@ -517,7 +517,7 @@ const test21 = () => {
 // test21();
 
 
-const test22 = () => {
+export const test22 = () => {
   abstract class CustomFile {
     constructor(protected name: string, protected size: number) { }
 
@@ -539,7 +539,7 @@ const test22 = () => {
 // test22();
 
 
-const test23 = () => {
+export const test23 = () => {
   type User = {
     firstName: string;
     pointCount: number;
@@ -566,7 +566,7 @@ const test23 = () => {
 // test23();
 
 
-const test24 = () => {
+export const test24 = () => {
   interface Countable {
     count(): number;
   }
@@ -583,7 +583,7 @@ const test24 = () => {
 // test24();
 
 
-const test25 = () => {
+export const test25 = () => {
   type Countable = {
     count(): number;
   };
@@ -605,7 +605,7 @@ const test25 = () => {
 // test25();
 
 
-const test26 = () => {
+export const test26 = () => {
   interface Animal {
     name: string;
   }
@@ -623,7 +623,7 @@ const test26 = () => {
 
   interface User {
     name: string;
-  };
+  }
 
   interface User {
     age: number;
@@ -639,7 +639,7 @@ const test26 = () => {
 // test26();
 
 
-const test27 = () => {
+export const test27 = () => {
   interface IUser {
     rating: number;
   }
@@ -673,7 +673,7 @@ const test27 = () => {
 // test27();
 
 
-const test28 = () => {
+export const test28 = () => {
   interface IUser {
     nickname: string;
     rating: number;
@@ -701,7 +701,7 @@ const test28 = () => {
 // test28();
 
 
-const test29 = () => {
+export const test29 = () => {
   interface IPhoneBook {
     [index: string]: number;
   }
@@ -717,7 +717,7 @@ const test29 = () => {
 // test29();
 
 
-const test30 = () => {
+export const test30 = () => {
   interface IBeep {
     sayBeep: () => string;
   }
@@ -738,7 +738,7 @@ const test30 = () => {
 // test30();
 
 
-const test31 = () => {
+export const test31 = () => {
   interface ICalculate {
     sum: (num1: number, num2: number) => number;
   }
@@ -760,7 +760,7 @@ const test31 = () => {
 // test31();
 
 
-const test32 = () => {
+export const test32 = () => {
   interface ICalculate {
     sum: (num1: number, num2: number) => number;
     multiply?: (x: number, y: number) => number;
@@ -778,7 +778,7 @@ const test32 = () => {
 // test32();
 
 
-const test33 = () => {
+export const test33 = () => {
   const merge = (coll1: number[], coll2: number[]) => {
     const result = [];
     result.push(...coll1);
@@ -793,7 +793,7 @@ const test33 = () => {
 // test33();
 
 
-const test34 = () => {
+export const test34 = () => {
   function merge<T>(coll1: T[], coll2: T[]): T[] {
     const result = [];
     result.push(...coll1);
@@ -809,7 +809,7 @@ const test34 = () => {
 // test34();
 
 
-const task35 = () => {
+export const task35 = () => {
   function first<T>(coll: Array<T>): T | null {
     return coll.length > 0 ? coll[0] : null;
   }
@@ -821,7 +821,7 @@ const task35 = () => {
 // task35();
 
 
-const task36 = () => {
+export const task36 = () => {
   type MyColl<T> = {
     data: Array<T>;
     forEach(callback: (v: T, i: number, arr: Array<T>) => void): void;
@@ -843,7 +843,7 @@ const task36 = () => {
 // task36();
 
 
-const task37 = () => {
+export const task37 = () => {
   interface HasId {
     id: number;
   }
@@ -877,7 +877,7 @@ const task37 = () => {
 // task37();
 
 
-const test38 = () => {
+export const test38 = () => {
   function last<T>(coll: T[]): T {
     return coll[coll.length - 1];
   }
@@ -887,7 +887,7 @@ const test38 = () => {
 // test38();
 
 
-const test39 = () => {
+export const test39 = () => {
   const last = <T>(coll: T[]): T => {
     return coll[coll.length - 1];
   };
@@ -897,7 +897,7 @@ const test39 = () => {
 // test39();
 
 
-const test40 = () => {
+export const test40 = () => {
   type Double<T, U> = {
     first: T;
     second: U;
@@ -912,7 +912,7 @@ const test40 = () => {
 };
 // test40();
 
-const test41 = () => {
+export const test41 = () => {
   function join<T, U>(coll1: (T | U)[], coll2: (T | U)[]): Array<T | U> {
     return coll1.concat(coll2);
   }
@@ -922,7 +922,7 @@ const test41 = () => {
 // test41();
 
 
-const test42 = () => {
+export const test42 = () => {
   const promise = new Promise<number>((resolve) => {
     setTimeout(() => {
       resolve(42);
@@ -934,7 +934,7 @@ const test42 = () => {
 // test42();
 
 
-const test43 = () => {
+export const test43 = () => {
   const wait = (ms: number): Promise<number> => {
     return new Promise((resolve) => {
       setTimeout(() => {
@@ -948,7 +948,7 @@ const test43 = () => {
 // test43();
 
 
-const test44 = () => {
+export const test44 = () => {
   const getHours = async () => {
     return new Date().getHours();
   };
@@ -962,7 +962,7 @@ const test44 = () => {
 // test44();
 
 
-const test45 = () => {
+export const test45 = () => {
   class Triple<T, U, V> {
     constructor(
       protected first: T,
@@ -1019,8 +1019,8 @@ const test45 = () => {
 // test45();
 
 
-const test46 = () => {
-  function toString(obj: {}) {
+export const test46 = () => {
+  function toString(obj: object | string | number) {
     return obj.toString();
   }
 
@@ -1029,7 +1029,7 @@ const test46 = () => {
   console.log(toString({}));
 
 
-  const foo: {} = {
+  const foo: object = {
     toString() {
       return 1;
     }
@@ -1037,7 +1037,7 @@ const test46 = () => {
 
   console.log(String(foo));
 
-  const bar: Object = {
+  const bar: object = {
     toString() {
       return '1';
     }
@@ -1048,7 +1048,7 @@ const test46 = () => {
 // test46();
 
 
-const test48 = () => {
+export const test48 = () => {
   type DinamicKeysObject = {
     [key: string | number | symbol]: unknown;
   };
@@ -1066,7 +1066,7 @@ const test48 = () => {
 // test48();
 
 
-const test49 = () => {
+export const test49 = () => {
   type MyTheme = {
     palete: {
       primary: 'red' | 'green' | 'blue';
@@ -1087,7 +1087,7 @@ const test49 = () => {
 // test49();
 
 
-const test50 = () => {
+export const test50 = () => {
   class Template {
     static [propName: string]: string | number;
 
@@ -1104,7 +1104,7 @@ const test50 = () => {
 // test50();
 
 
-const test51 = () => {
+export const test51 = () => {
   type Listeners = {
     [key: `on${string}`]: (value: unknown) => void;
   };
@@ -1119,7 +1119,7 @@ const test51 = () => {
 // test51();
 
 
-const test52 = () => {
+export const test52 = () => {
   interface Person {
     name: string;
     age: number;
@@ -1161,7 +1161,7 @@ const test52 = () => {
 // test52();
 
 
-const test53 = () => {
+export const test53 = () => {
   interface Person {
     name: string;
     age: number;
@@ -1184,7 +1184,7 @@ const test53 = () => {
 };
 // test53();
 
-const test54 = () => {
+export const test54 = () => {
   type Context<K extends string, V> = {
     [Key in K]: V;
   };
@@ -1203,7 +1203,7 @@ const test54 = () => {
 // test54();
 
 
-const test55 = () => {
+export const test55 = () => {
   type Rating = 0 | 1 | 2 | 3 | 4 | 5;
   type SongRating = Record<string, Rating>;
 
@@ -1213,4 +1213,4 @@ const test55 = () => {
 
   console.log(songRating);
 };
-test55();
+// test55();

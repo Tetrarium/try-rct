@@ -6,7 +6,7 @@ interface ItemProps {
 }
 
 function Item({ name, isPacked }: ItemProps) {
-  let itemContent = isPacked ? <del>{name + ' ✅'}</del> : name + ' ❌';
+  const itemContent = isPacked ? <del>{name + ' ✅'}</del> : name + ' ❌';
 
   return (
     <li className={css.item}>{itemContent}</li>
