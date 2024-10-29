@@ -2,8 +2,13 @@
   border: 1px solid black
   padding: 10px
   margin-top: -1px
-  height: fit-content
-  transition: height .5s linear
+  // height: fit-content
+  transition: max-height 0.5s ease-out
+  overflow: hidden
+  max-height: 70px
+
+.panel_active
+  max-height: 200px
 
 .header
   margin-bottom: 10px

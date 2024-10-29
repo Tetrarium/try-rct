@@ -11,7 +11,7 @@ interface PanelProps {
 const Panel: FC<PanelProps & PropsWithChildren> = ({ title, isActive, onShow, children }) => {
 
   return (
-    <section className={s.panel}>
+    <section className={`${s.panel} ${isActive ? s.panel_active : ''}`}>
       <h4 className={s.header}>{title}</h4>
       {isActive
         ? <p>{children}</p>
