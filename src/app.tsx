@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 import AvoidDeeplyNested from "./components/AvoidDeeplyNested/AvoidDeeplyNested";
 import { ConditionalRendering } from "./components/ConditionalRendering/ConditionalRendering";
+import ExtractToReducer from "./components/ExtractToReducer/ExtractToReducer";
 import FirstComponent from "./components/FirstComponent/FirstComponent";
 import Game from "./components/Game/game";
 import LiftingState from "./components/LiftingState/LiftingState";
@@ -59,6 +60,7 @@ function App() {
           <NavItem route='/rendering-list'>Rendering List</NavItem>
           <NavItem route='/avoid-deeply-nested'>Avoid deeply nested state</NavItem>
           <NavItem route='/lifting-state'>Lifting State</NavItem>
+          <NavItem route='/extract-to-reducer'>Extract To Reducer</NavItem>
         </ul>
       </Nav>
       <Main>
@@ -71,6 +73,7 @@ function App() {
           <Route path="/rendering-list" element={<RenderingList />} />
           <Route path="/avoid-deeply-nested" element={<AvoidDeeplyNested />} />
           <Route path="/lifting-state" element={<LiftingState />} />
+          <Route path="/extract-to-reducer" element={<ExtractToReducer />} />
         </Routes>
       </Main>
     </Container>
