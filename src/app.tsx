@@ -7,6 +7,7 @@ import ExtractToReducer from "./components/ExtractToReducer/ExtractToReducer";
 import FirstComponent from "./components/FirstComponent/FirstComponent";
 import Game from "./components/Game/game";
 import LiftingState from "./components/LiftingState/LiftingState";
+import PassingDataWithContext from "./components/PassingDataWithContext/PassingDataWithContext";
 import PassingProps from "./components/PassingProps/PassingProps";
 import Products from "./components/Products/products";
 import RenderingList from "./components/renderingList/RenderingList";
@@ -61,6 +62,7 @@ function App() {
           <NavItem route='/avoid-deeply-nested'>Avoid deeply nested state</NavItem>
           <NavItem route='/lifting-state'>Lifting State</NavItem>
           <NavItem route='/extract-to-reducer'>Extract To Reducer</NavItem>
+          <NavItem route="/passing-data-with-context">Passing Data With Context</NavItem>
         </ul>
       </Nav>
       <Main>
@@ -74,6 +76,7 @@ function App() {
           <Route path="/avoid-deeply-nested" element={<AvoidDeeplyNested />} />
           <Route path="/lifting-state" element={<LiftingState />} />
           <Route path="/extract-to-reducer" element={<ExtractToReducer />} />
+          <Route path="/passing-data-with-context" element={<PassingDataWithContext />} />
         </Routes>
       </Main>
     </Container>
