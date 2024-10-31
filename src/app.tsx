@@ -2,6 +2,7 @@ import { NavLink, Route, Routes } from "react-router-dom";
 import styled from "styled-components";
 
 import AvoidDeeplyNested from "./components/AvoidDeeplyNested/AvoidDeeplyNested";
+import CombineReducerContext from "./components/CombineReducerContext/CombineReducerContext";
 import { ConditionalRendering } from "./components/ConditionalRendering/ConditionalRendering";
 import ExtractToReducer from "./components/ExtractToReducer/ExtractToReducer";
 import FirstComponent from "./components/FirstComponent/FirstComponent";
@@ -63,6 +64,7 @@ function App() {
           <NavItem route='/lifting-state'>Lifting State</NavItem>
           <NavItem route='/extract-to-reducer'>Extract To Reducer</NavItem>
           <NavItem route="/passing-data-with-context">Passing Data With Context</NavItem>
+          <NavItem route="/combine-reducer-context">Combine Reducer And Context</NavItem>
         </ul>
       </Nav>
       <Main>
@@ -77,6 +79,7 @@ function App() {
           <Route path="/lifting-state" element={<LiftingState />} />
           <Route path="/extract-to-reducer" element={<ExtractToReducer />} />
           <Route path="/passing-data-with-context" element={<PassingDataWithContext />} />
+          <Route path="/combine-reducer-context" element={<CombineReducerContext />} />
         </Routes>
       </Main>
     </Container>
